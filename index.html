@@ -1,65 +1,56 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>LiveLab 4 Demo</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eco-Friendly Destinations</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-  <!-- Header starts here -->
-  <header class="site-header">
-    <!-- Logo -->
-    <div class="logo">MyLogo</div>
-    <!-- Navigation bar -->
-    <nav class="navbar">
+  <header>
+    <nav>
       <ul>
         <li><a href="#">Home</a></li>
+        <li><a href="#">Destinations</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
     </nav>
   </header>
-  <!-- Header ends here -->
 
-  <!-- Hero section starts here -->
   <section class="hero">
-    <!-- Headline for the hero section -->
-    <h1>Explore Sustainable Travel</h1>
-    <!-- Subtext under the headline -->
-    <p>Discover eco-friendly destinations and make a positive impact on the planet.</p>
+    <div class="hero-text">
+      <h1>Explore Sustainable Travel</h1>
+      <p>Discover eco-friendly destinations that care for our planet.</p>
+    </div>
   </section>
-  <!-- Hero section ends here -->
 
-  <!-- Destinations section starts here -->
   <section class="destinations">
-    <!-- Card 1 -->
-    <div class="destination-card">
-      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
-        alt="Green Forest">
-      <h2>Green Forest, Canada</h2>
-      <p>Experience the beauty of untouched forests and support local conservation efforts.</p>
-    </div>
-    <!-- Card 2 -->
-    <div class="destination-card">
-      <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80"
-        alt="Eco Beach">
-      <h2>Eco Beach, Costa Rica</h2>
-      <p>Relax on clean beaches and enjoy eco-friendly resorts committed to sustainability.</p>
-    </div>
-    <!-- Card 3 -->
-    <div class="destination-card">
-      <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=400&q=80"
-        alt="Mountain Village">
-      <h2>Mountain Village, Switzerland</h2>
-      <p>Visit charming villages that use renewable energy and promote green tourism.</p>
+    <h2>Top Eco-Friendly Destinations</h2>
+    <div class="cards-container">
+      <div class="card">
+        <img src="https://source.unsplash.com/400x250/?forest,nature" alt="Rainforest" />
+        <h3>Costa Rica</h3>
+        <p>Known for its rainforests and eco-lodges, Costa Rica is a leader in sustainable tourism.</p>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x250/?iceland,nature" alt="Iceland" />
+        <h3>Iceland</h3>
+        <p>Powered by geothermal energy, Iceland offers breathtaking scenery and green travel.</p>
+      </div>
+      <div class="card">
+        <img src="https://source.unsplash.com/400x250/?new-zealand,eco" alt="New Zealand" />
+        <h3>New Zealand</h3>
+        <p>With protected natural parks and a strong sustainability mission, NZ is a green gem.</p>
+      </div>
     </div>
   </section>
-  <!-- Destinations section ends here -->
 
-  <script src="script.js"></script>
+  <section class="cta">
+    <h2>Ready to Go Green?</h2>
+    <p>Start planning your sustainable adventure today.</p>
+    <a href="#" class="cta-button">Plan Your Trip</a>
+  </section>
 </body>
-
 </html>

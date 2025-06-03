@@ -1,124 +1,121 @@
-/* Header styles */
-.site-header {
-  /* Use flex to arrange logo and nav vertically on mobile */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px 0;
-  background: #f5f5f5;
-}
-
-.logo {
-  font-size: 2em;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.navbar ul {
-  list-style: none;
-  padding: 0;
+/* Base Styles */
+body {
   margin: 0;
-  display: flex;
-  flex-direction: column; /* Stack links vertically on mobile */
-  align-items: center;
-  gap: 10px; /* Space between links */
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0fdf4;
+  color: #2e7d32;
 }
 
-.navbar a {
-  text-decoration: none;
-  color: #333;
-  font-size: 1.1em;
-  padding: 5px 10px;
+header {
+  background-color: #a5d6a7;
+  padding: 1em;
 }
 
-/* On larger screens, show nav links in a row */
-@media (min-width: 700px) {
-  .site-header {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-  }
-  .logo {
-    margin-bottom: 0;
-  }
-  .navbar ul {
-    flex-direction: row; /* Show links in a row */
-    gap: 20px;
-  }
-}
-
-/* Hero section styles */
-.hero {
-  /* Set the height to fill the whole viewport */
-  height: 100vh;
-  /* Add a simple linear gradient background */
-  background: linear-gradient(to right, #6a11cb, #2575fc);
-  /* Center the content horizontally and vertically */
+nav ul {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* Set text color to white for contrast */
-  color: white;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  margin: 0.5em 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #1b5e20;
+  font-weight: bold;
+}
+
+.hero {
+  background: linear-gradient(to bottom right, #a5d6a7, #b2ebf2);
+  padding: 4em 2em;
+  text-align: center;
 }
 
 .hero h1 {
   font-size: 2.5em;
-  margin-bottom: 20px;
+  margin-bottom: 0.5em;
 }
 
-.hero p {
-  font-size: 1.2em;
-}
-
-/* Destinations section styles */
 .destinations {
-  /* Use flex to stack cards vertically on mobile */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px; /* Space between cards */
-  padding: 30px 10px;
-  background: #f0f8ff;
-}
-
-.destination-card {
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  padding: 20px;
-  max-width: 320px;
-  width: 100%;
+  padding: 2em;
   text-align: center;
 }
 
-.destination-card img {
-  width: 100%;
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.card {
+  background-color: #c8e6c9;
   border-radius: 8px;
-  height: 180px;
-  object-fit: cover;
-  margin-bottom: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, background-color 0.3s;
 }
 
-.destination-card h2 {
-  font-size: 1.3em;
-  margin: 10px 0 8px 0;
+.card:hover {
+  transform: scale(1.05);
+  background-color: #eeeeee; /* fainted grey on hover */
 }
 
-.destination-card p {
-  font-size: 1em;
-  color: #444;
+.card img {
+  width: 100%;
+  height: auto;
 }
 
-/* On larger screens, show cards in a row */
-@media (min-width: 900px) {
-  .destinations {
+.card h3 {
+  margin: 0.5em 0 0.2em;
+}
+
+.card p {
+  padding: 0 1em 1em;
+}
+
+.cta {
+  background-color: #b2dfdb;
+  text-align: center;
+  padding: 3em 2em;
+}
+
+.cta h2 {
+  margin-bottom: 0.5em;
+}
+
+.cta-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 0.75em 1.5em;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #388e3c;
+}
+
+/* Media Queries: Desktop View */
+@media (min-width: 600px) {
+  nav ul {
     flex-direction: row;
     justify-content: center;
-    align-items: stretch;
+    gap: 2em;
   }
-  .destination-card {
-    max-width: 300px;
+
+  .cards-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .card {
+    flex: 1;
   }
 }
